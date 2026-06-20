@@ -12,8 +12,12 @@ console.log(`Number of categories: ${categoryArr.length}`);
 categoryArr.forEach(element => {
     // task 2.1
     console.log(`Categories: ${element.querySelector('h2').textContent}`);
-
+    
+    element.querySelector('h2').classList.add("list-title");
 
     // task 2.2
     console.log(`Elements: ${element.querySelectorAll('li').length}`);
+
+    
 })
+

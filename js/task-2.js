@@ -35,7 +35,7 @@ const list = document.querySelector('.gallery');
 images.forEach(({url,alt}) => {
 
   const listItem = document.createElement('li');
-  listItem.classList.add('item');
+  listItem.classList.add('image-list-item');
   list.append(listItem);
 
 

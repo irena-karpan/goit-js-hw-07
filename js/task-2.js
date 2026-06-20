@@ -37,7 +37,7 @@ images.forEach(({ url, alt }) => {
   markup.push(`<li class ='image-list-item'><img src = '${url}' alt = '${alt}'></li>`)
 })
 
-list.innerHTML = markup.join('');
+list.insertAdjacentHTML('afterbegin',markup.join('')) ;
 
 
 

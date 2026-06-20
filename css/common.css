@@ -133,6 +133,11 @@ input {
   letter-spacing: 0.04em;
   color: #2e2f42;
   padding: 8px 0 8px 16px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 label {
@@ -167,7 +172,7 @@ button[type="submit"] {
   padding: 8px 16px;
   width: 86px;
   height: 40px;
-  background: #4e75ff;
+  background-color: #4e75ff;
   border-color: transparent;
 }
 /* #endregion */
@@ -183,10 +188,17 @@ button[type="button"] {
   padding: 8px 16px;
 
   border-radius: 8px;
-  background: #4e75ff;
+  background-color: #4e75ff;
   border-color: transparent;
 
   width: 148px;
+}
+
+button {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .widget p {
@@ -207,3 +219,11 @@ button[type="button"] {
 }
 
 /* #endregion */
+
+input:hover {
+  border-color: #000;
+}
+
+button:hover {
+  background-color: #6c8cff;
+}

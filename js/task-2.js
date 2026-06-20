@@ -32,18 +32,12 @@ const images = [
 const list = document.querySelector('.gallery');
 
 
-images.forEach(({url,alt}) => {
-
-  const listItem = document.createElement('li');
-  listItem.classList.add('image-list-item');
-  list.append(listItem);
-
-
-  const image = document.createElement('img');
-  image.src = url;
-  image.alt = alt;
-  listItem.append(image);
-  
-  // image.innerHTML += `<img src = '${url}' alt = '${alt}' > `;
-  // console.log(listItem);
+let markup = [];
+images.forEach(({ url, alt }) => {
+  markup.push(`<li class ='image-list-item'><img src = '${url}' alt = '${alt}'></li>`)
 })
+
+list.innerHTML = markup.join('');
+
+
+

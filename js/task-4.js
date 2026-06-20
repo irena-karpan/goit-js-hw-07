@@ -1,11 +1,10 @@
 'use strict'
 
 const loginForm = document.querySelector('.login-form');
-const formObj = {};
-
 
 
 loginForm.addEventListener('submit', (event) => {
+    const formObj = {};
     event.preventDefault();
 
     const form = event.target;
@@ -14,6 +13,7 @@ loginForm.addEventListener('submit', (event) => {
 
     if (formObj.email === '' || formObj.password === '') {
         alert('All form fields must be filled in');
+        return;
     }
 
     console.log(formObj);
